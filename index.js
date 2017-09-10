@@ -4,6 +4,7 @@ const { Event } = require('race-lib');
 const inquirer = require('inquirer');
 const fuzzy = require('fuzzy');
 const chalk = require('chalk');
+const { table } = require('table');
 
 const ui = new inquirer.ui.BottomBar();
 
@@ -44,15 +45,21 @@ const racePrompt = function(evt) {
     ui.updateBottomBar('Entrants loading...');
     return race.entrants()
   }).then((users) => {
-    ui.updateBottomBar(usersStr(users));
+    displayEntrants(users);
     selectEvent();
   });
 }
 
-const usersStr = function (users) {
-  return users.reduce(function(str, user){
-    return `${str}\n${user.name}: ${user.national_rank} -  ${user.regional_rank}`;
-  }, "");
+const displayEntrants = function(users) {
+  const headers = [["Name", "Club", "Regional Rank", "National Rank"].map( h => chalk.bold(h))];
+  const data = users.map((user) => {
+    return [user.name,
+      user.current_club,
+      user.regional_rank === 999 ? '' : user.regional_rank,
+      user.national_rank === 999 ? '' : user.national_rank
+    ];
+  });
+  ui.updateBottomBar(table(headers.concat(data)));
 }
 
 const searchEvents = function(answers, input) {
