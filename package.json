@@ -1,6 +1,6 @@
 {
   "name": "race-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CLI to interact with britishcycling.org via race-lib",
   "main": "index.js",
   "repository": "https://github.com/mrloop/race-cli.git",
