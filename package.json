@@ -23,5 +23,8 @@
   },
   "scripts": {
     "test": "ava"
+  },
+  "engines": {
+    "node": ">=6"
   }
 }
