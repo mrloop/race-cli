@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/mrloop/race-cli.svg)](https://travis-ci.org/mrloop/race-cli)
 
-# race-cli
+# ⚙ race-cli
 
 CLI wrapper around [race-lib](https://github.com/mrloop/race-lib)
 
