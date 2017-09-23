@@ -5,6 +5,11 @@ const inquirer = require('inquirer');
 const fuzzy = require('fuzzy');
 const chalk = require('chalk');
 const { table } = require('table');
+const cheerio = require('cheerio');
+const fetch = require('node-fetch');
+
+Event.inject('cheerio', cheerio);
+Event.inject('fetch', fetch);
 
 const ui = new inquirer.ui.BottomBar();
 
