@@ -1,6 +1,6 @@
 'use strict';
 
-const { Event } = require('race-lib');
+const { Event, User, Race } = require('race-lib');
 const inquirer = require('inquirer');
 const fuzzy = require('fuzzy');
 const chalk = require('chalk');
@@ -10,6 +10,11 @@ const fetch = require('node-fetch');
 
 Event.inject('cheerio', cheerio);
 Event.inject('fetch', fetch);
+
+if(process.env.test) {
+  const { injectFixtures } = require('race-fix');
+  injectFixtures(Event);
+}
 
 const ui = new inquirer.ui.BottomBar();
 

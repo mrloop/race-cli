@@ -16,7 +16,8 @@
     "inquirer": "^3.2.1",
     "inquirer-autocomplete-prompt": "^0.11.1",
     "node-fetch": "^1.7.3",
-    "race-lib": "^0.0.4",
+    "race-fix": "^0.0.2",
+    "race-lib": "^0.0.5",
     "table": "^4.0.1"
   },
   "devDependencies": {

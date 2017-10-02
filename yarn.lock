@@ -2407,9 +2407,13 @@ qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
-race-lib@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/race-lib/-/race-lib-0.0.4.tgz#ddfd5861a1197e451c6667e2780fe31a96995a5a"
+race-fix@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/race-fix/-/race-fix-0.0.2.tgz#128d9db11bd042c8105cea53d59b70e60dfe060a"
+
+race-lib@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/race-lib/-/race-lib-0.0.5.tgz#9cf58ea3f25930cbf08ee716c7672d31e3b3c26d"
   dependencies:
     es6-promise "^4.1.1"
     uri-js "^3.0.2"
