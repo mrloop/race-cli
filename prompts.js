@@ -53,9 +53,15 @@ const racePrompt = function(evt) {
   }).then((answers) => {
     let race = evt.races.find((race) => { return race.id === answers.race; });
     ui.updateBottomBar('Entrants loading...');
+    race.addEventListener('entrantLoaded', (data) => {
+      ui.updateBottomBar(`Entrants loading ${data.detail.loaded}/${data.detail.total}`);
+    });
     return race.entrants()
   }).then((users) => {
     displayEntrants(users);
+    return selectEvent();
+  }).catch((err) => {
+    ui.updateBottomBar(chalk.bgRed(err.message));
     return selectEvent();
   })
 }
