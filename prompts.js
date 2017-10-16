@@ -54,7 +54,8 @@ const racePrompt = function(evt) {
     let race = evt.races.find((race) => { return race.id === answers.race; });
     ui.updateBottomBar('Entrants loading...');
     race.addEventListener('entrantLoaded', (data) => {
-      ui.updateBottomBar(`Entrants loading ${data.detail.loaded}/${data.detail.total}`);
+      let status = `Entrants loading ${data.detail.loaded}/${data.detail.total}`;
+      displayEntrants(data.detail.users, status);
     });
     return race.entrants()
   }).then((users) => {
@@ -66,7 +67,7 @@ const racePrompt = function(evt) {
   })
 }
 
-const displayEntrants = function(users) {
+const displayEntrants = function(users, status='') {
   const headers = [["Name", "Club", "Regional Rank", "National Rank"].map( h => chalk.bold(h))];
   const data = users.reduce((arr, user) => {
     if(user.name) {
@@ -78,7 +79,8 @@ const displayEntrants = function(users) {
     }
     return arr;
   }, []);
-  ui.updateBottomBar(table(headers.concat(data)));
+  let str = `${table(headers.concat(data))}\n${status}`;
+  ui.updateBottomBar(str);
 }
 
 const searchEvents = function(answers, input) {
