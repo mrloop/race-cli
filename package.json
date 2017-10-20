@@ -1,6 +1,6 @@
 {
   "name": "race-cli",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "CLI to interact with britishcycling.org via race-lib",
   "main": "index.js",
   "repository": "https://github.com/mrloop/race-cli.git",
@@ -17,7 +17,7 @@
     "inquirer-autocomplete-prompt": "^0.11.1",
     "node-fetch": "^1.7.3",
     "race-fix": "^0.0.2",
-    "race-lib": "^0.0.6",
+    "race-lib": "^0.0.7",
     "table": "^4.0.1"
   },
   "devDependencies": {

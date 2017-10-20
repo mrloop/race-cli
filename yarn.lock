@@ -2421,9 +2421,9 @@ race-fix@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/race-fix/-/race-fix-0.0.2.tgz#128d9db11bd042c8105cea53d59b70e60dfe060a"
 
-race-lib@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/race-lib/-/race-lib-0.0.6.tgz#9718c1bbf37df1c53ea90898cc9d07f4af18ff7c"
+race-lib@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/race-lib/-/race-lib-0.0.7.tgz#4ecdf410cc93d793c532f9cc6a3961693c0a18cd"
   dependencies:
     abort-controller "^1.0.0"
     es6-promise "^4.1.1"
