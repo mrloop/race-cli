@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mrloop/race-cli.svg)](https://travis-ci.org/mrloop/race-cli)
+[![CI](https://github.com/mrloop/race-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/mrloop/race-cli/actions/workflows/ci.yml)
 
 # ⚙ race-cli
 
