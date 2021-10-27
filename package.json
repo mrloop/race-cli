@@ -2,13 +2,17 @@
   "name": "race-cli",
   "version": "1.0.0",
   "description": "CLI to interact with britishcycling.org via race-lib",
-  "main": "index.js",
-  "type": "module",
   "repository": "https://github.com/mrloop/race-cli.git",
-  "author": "mrloop <ewan@mrloop.com>",
   "license": "MIT",
+  "author": "mrloop <ewan@mrloop.com>",
+  "type": "module",
+  "main": "index.js",
   "bin": {
     "race": "./index.js"
+  },
+  "scripts": {
+    "test": "ava",
+    "release": "yarn release-it"
   },
   "dependencies": {
     "chalk": "^2.4.2",
@@ -23,10 +27,27 @@
   },
   "devDependencies": {
     "ava": "2.4.0",
-    "inquirer-test": "2.0.1"
+    "inquirer-test": "2.0.1",
+    "release-it": "^14.2.1",
+    "release-it-lerna-changelog": "^3.1.0"
   },
-  "scripts": {
-    "test": "ava"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   },
   "volta": {
     "node": "16.13.0",
