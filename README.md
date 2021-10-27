@@ -1,4 +1,9 @@
 [![CI](https://github.com/mrloop/race-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/mrloop/race-cli/actions/workflows/ci.yml)
+[![Latest NPM release][npm-badge]][npm-badge-url]
+
+[npm-badge]: https://img.shields.io/npm/v/race-cli.svg
+[npm-badge-url]: https://www.npmjs.com/package/race-cli
+
 
 # ⚙ race-cli
 
@@ -8,8 +13,15 @@ Retrieve data about entrants to [britishcycling.org](https://www.britishcycling.
 
 To try it out
 
-   npm install -g race-cli
-   race
+```sh
+npm install -g race-cli
+race
+```
 
-![cli interaction](cli.gif)
+```sh
+yarn global add race-cli
+race
+```
+
+![cli interaction](race-cli.svg)
 
