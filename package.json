@@ -22,8 +22,8 @@
     "table": "^5.4.6"
   },
   "devDependencies": {
-    "ava": "^2.4",
-    "inquirer-test": "^2.0.1"
+    "ava": "2.4.0",
+    "inquirer-test": "2.0.1"
   },
   "scripts": {
     "test": "ava"

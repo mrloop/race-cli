@@ -461,7 +461,7 @@ astral-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
   integrity sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==
 
-ava@^2.4:
+ava@2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/ava/-/ava-2.4.0.tgz#a3bd8b0e01d8826004c91de375eb2313ba5237c3"
   integrity sha512-CQWtzZZZeU2g4StojRv6MO9RIRi4sLxGSB9+3C3hv0ttUEG1tkJLTLyrBQeFS4WEeK12Z4ovE3f2iPVhSy8elA==
@@ -1544,7 +1544,7 @@ inquirer-autocomplete-prompt@^1.0.1:
     figures "^2.0.0"
     run-async "^2.3.0"
 
-inquirer-test@^2.0.1:
+inquirer-test@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/inquirer-test/-/inquirer-test-2.0.1.tgz#a5dc39980b26ebad8b65d2a5e644fd2d497453c7"
   integrity sha512-gpO6+E/VtPMNp7FBnIJtEWPHMzZ0GJK/EI3ThxtdBHbmbFW5PRl150CCMT3SpmqJY5x9nBeviyn8ZalDIABmFQ==
