@@ -1,24 +1,23 @@
-'use strict';
-
-const { Event, User, Race } = require('race-lib');
-const inquirer = require('inquirer');
-const fuzzy = require('fuzzy');
-const chalk = require('chalk');
-const { table } = require('table');
-const cheerio = require('cheerio');
-const fetch = require('node-fetch');
+import { Event, User, Race } from 'race-lib';
+import inquirer from 'inquirer';
+import fuzzy from 'fuzzy';
+import chalk from 'chalk';
+import { table } from 'table';
+import cheerio from 'cheerio';
+import fetch from 'node-fetch';
+import { injectFixtures } from 'race-fix';
+import prompt from 'inquirer-autocomplete-prompt';
 
 Event.inject('cheerio', cheerio);
 Event.inject('fetch', fetch);
 
 if(process.env.test) {
-  const { injectFixtures } = require('race-fix');
   injectFixtures(Event);
 }
 
-const ui = new inquirer.ui.BottomBar();
+export const ui = new inquirer.ui.BottomBar();
 
-inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
+inquirer.registerPrompt('autocomplete', prompt);
 
 const selectRace = function(evt) {
   if(evt.races.find( race => race.id )) {
@@ -92,7 +91,7 @@ const searchEvents = function(answers, input) {
   })
 }
 
-const selectEvent = function() {
+export function selectEvent () {
   return inquirer.prompt({
     message: "what event?",
     name: 'event',
@@ -108,6 +107,3 @@ const selectEvent = function() {
     console.log(error);
   });
 }
-
-module.exports.selectEvent = selectEvent;
-module.exports.ui = ui;

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "CLI to interact with britishcycling.org via race-lib",
   "main": "index.js",
+  "type": "module",
   "repository": "https://github.com/mrloop/race-cli.git",
   "author": "mrloop <ewan@mrloop.com>",
   "license": "MIT",
