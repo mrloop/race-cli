@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { selectEvent, ui } = require('./prompts');
+import { selectEvent, ui } from './prompts.js';
 
 ui.updateBottomBar('Events loading...');
 selectEvent();
