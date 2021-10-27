@@ -22,7 +22,7 @@
     "inquirer-autocomplete-prompt": "^1.0.1",
     "node-fetch": "^2.6.0",
     "race-fix": "^0.0.2",
-    "race-lib": "^1.0.0",
+    "race-lib": "^2.0.0",
     "table": "^5.4.6"
   },
   "devDependencies": {

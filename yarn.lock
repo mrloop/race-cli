@@ -3896,10 +3896,10 @@ race-fix@^0.0.2:
   resolved "https://registry.yarnpkg.com/race-fix/-/race-fix-0.0.2.tgz#128d9db11bd042c8105cea53d59b70e60dfe060a"
   integrity sha1-Eo2dsRvQQsgQXOpT1Ztw5g3+Bgo=
 
-race-lib@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/race-lib/-/race-lib-1.0.0.tgz#6ceed01f9fb101f62fe0e9786e045633bcb3184d"
-  integrity sha512-LJh6KW1T6dFQanVq13+JQj1FBJY0MihNMmOtSx0PCBIdxJl5cFfZXWT3MCLGgc+ooFFwlLoC3WgtEOBXjTI4lg==
+race-lib@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/race-lib/-/race-lib-2.0.0.tgz#6af2be2b579437e941d0db7dba6913ea5ff51079"
+  integrity sha512-/3k7KGKAiYGrj2Xb7hkcXsd7fZ1jLSLacytP/WuE3bqlG8UUaM75gXFwS01P1hxinfC5dpBnXegnxIgnpQ5Now==
   dependencies:
     abort-controller "^3.0.0"
     es6-promise "^4.2"
