@@ -11,7 +11,7 @@ stages:
   - test
 
 test:node:6:
-  image: node:6
+  image: node:17
   stage: test
   script:
   - yarn test
