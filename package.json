@@ -26,7 +26,7 @@
     "table": "^5.4.6"
   },
   "devDependencies": {
-    "ava": "2.4.0",
+    "ava": "3.15.0",
     "inquirer-test": "2.0.1",
     "release-it": "14.11.6",
     "release-it-lerna-changelog": "3.1.0"
