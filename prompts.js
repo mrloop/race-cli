@@ -71,7 +71,7 @@ const displayEntrants = function(users, status='') {
   const data = users.reduce((arr, user) => {
     if(user.name) {
       arr.push([user.name,
-        user.current_club,
+        user.current_club || '',
         user.regional_rank === 999 ? '' : user.regional_rank,
         user.national_rank === 999 ? '' : user.national_rank
       ]);
