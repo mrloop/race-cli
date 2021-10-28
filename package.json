@@ -11,7 +11,7 @@
     "race": "./index.js"
   },
   "scripts": {
-    "test": "ava",
+    "test": "yarn qunit test.js",
     "release": "yarn release-it"
   },
   "dependencies": {
@@ -26,7 +26,7 @@
     "table": "^5.4.6"
   },
   "devDependencies": {
-    "ava": "2.4.0",
+    "qunit": "2.17.2",
     "inquirer-test": "2.0.1",
     "release-it": "14.11.6",
     "release-it-lerna-changelog": "3.1.0"
