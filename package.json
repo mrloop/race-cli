@@ -23,7 +23,7 @@
     "node-fetch": "^2.6.0",
     "race-fix": "^0.0.2",
     "race-lib": "^2.0.0",
-    "table": "^5.4.6"
+    "table": "^6.0.0"
   },
   "devDependencies": {
     "qunit": "2.17.2",
