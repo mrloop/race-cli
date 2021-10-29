@@ -1,19 +1,10 @@
-import { Event, User, Race } from 'race-lib';
+import { Event, setup } from 'race-lib';
 import inquirer from 'inquirer';
 import fuzzy from 'fuzzy';
 import chalk from 'chalk';
 import { table } from 'table';
 import cheerio from 'cheerio';
-import fetch from 'node-fetch';
-import { injectFixtures } from 'race-fix';
 import prompt from 'inquirer-autocomplete-prompt';
-
-Event.inject('cheerio', cheerio);
-Event.inject('fetch', fetch);
-
-if(process.env.test) {
-  injectFixtures(Event);
-}
 
 export const ui = new inquirer.ui.BottomBar();
 
@@ -91,7 +82,9 @@ const searchEvents = function(answers, input) {
   })
 }
 
-export function selectEvent () {
+export async function selectEvent () {
+  await setup({ cheerio, useFixtures: process.env.test });
+
   return inquirer.prompt({
     message: "what event?",
     name: 'event',
@@ -104,6 +97,6 @@ export function selectEvent () {
       return selectRace(evt);
     });
   }).catch((error) => {
-    console.log(error);
+    console.error(error);
   });
 }
