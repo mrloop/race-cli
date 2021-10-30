@@ -83,7 +83,7 @@ const searchEvents = function(answers, input) {
 }
 
 export async function selectEvent () {
-  await setup({ cheerio, useFixtures: process.env.test });
+  await setup({ cheerio, requestDelay: 500, useFixtures: process.env.test });
 
   return inquirer.prompt({
     message: "what event?",
