@@ -15,7 +15,7 @@
     "release": "yarn release-it"
   },
   "dependencies": {
-    "chalk": "^4.0.0",
+    "chalk": "^5.0.0",
     "cheerio": "^1.0.0-rc.3",
     "fuzzy": "^0.1.3",
     "inquirer": "^8.0.0",
